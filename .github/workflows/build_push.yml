@@ -22,16 +22,16 @@ jobs:
           arduino-board-fqbn: esp32:esp32:esp32s2
           platform-url: https://github.com/espressif/arduino-esp32/releases/download/3.0.3/package_esp32_dev_index.json
           
-      - name: Show Arduino dir structure
-        run: |
-          find /home/runner/.arduino15/packages/esp32/hardware/
+      #- name: Show Arduino dir structure
+      #  run: |
+      #    find /home/runner/.arduino15/packages/esp32/hardware/
         
-      - name: Pull arduino-esp32 v2.0.4
-        uses: actions/checkout@v2
-        with:
-          repository: espressif/arduino-esp32
-          # ref: 2.0.4
-          # path: 2.0.4arduino-esp32
+      #- name: Pull arduino-esp32 v2.0.4
+      #  uses: actions/checkout@v2
+      #  with:
+      #    repository: espressif/arduino-esp32
+      #    # ref: 2.0.4
+      #    # path: 2.0.4arduino-esp32
           
       - name: Pull arduino-esp32 v2.0.10
         uses: actions/checkout@v2
@@ -132,12 +132,12 @@ jobs:
         run: |
           rm -f CustomTFT_eSPI/User_Setup_Select.h
           ls
-          cp ./User_Setup_Select.h CustomTFT_eSPI/
-          cp ./User_Setup_marauder_mini.h CustomTFT_eSPI/
-          cp ./User_Setup_og_marauder.h CustomTFT_eSPI/
-          cp ./User_Setup_marauder_m5stickc.h CustomTFT_eSPI/
-          cp ./User_Setup_marauder_m5stickcp2.h CustomTFT_eSPI/
-          cp ./User_Setup_marauder_rev_feather.h CustomTFT_eSPI/
+          cp /home/runner/work/ESP32Marauder/ESP32Marauder/User_Setup_Select.h CustomTFT_eSPI/
+          cp /home/runner/work/ESP32Marauder/ESP32Marauder/User_Setup_marauder_mini.h CustomTFT_eSPI/
+          cp /home/runner/work/ESP32Marauder/ESP32Marauder/User_Setup_og_marauder.h CustomTFT_eSPI/
+          cp /home/runner/work/ESP32Marauder/ESP32Marauder/User_Setup_marauder_m5stickc.h CustomTFT_eSPI/
+          cp /home/runner/work/ESP32Marauder/ESP32Marauder/User_Setup_marauder_m5stickcp2.h CustomTFT_eSPI/
+          cp /home/runner/work/ESP32Marauder/ESP32Marauder/User_Setup_marauder_rev_feather.h CustomTFT_eSPI/
           pwd
           ls -la
           ls -la CustomTFT_eSPI
