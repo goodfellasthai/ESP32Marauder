@@ -131,12 +131,13 @@ jobs:
       - name: Configure TFT_eSPI
         run: |
           rm -f CustomTFT_eSPI/User_Setup_Select.h
-          cp User_Setup_Select.h CustomTFT_eSPI/
-          cp User_Setup_marauder_mini.h CustomTFT_eSPI/
-          cp User_Setup_og_marauder.h CustomTFT_eSPI/
-          cp User_Setup_marauder_m5stickc.h CustomTFT_eSPI/
-          cp User_Setup_marauder_m5stickcp2.h CustomTFT_eSPI/
-          cp User_Setup_marauder_rev_feather.h CustomTFT_eSPI/
+          ls
+          cp ./User_Setup_Select.h CustomTFT_eSPI/
+          cp ./User_Setup_marauder_mini.h CustomTFT_eSPI/
+          cp ./User_Setup_og_marauder.h CustomTFT_eSPI/
+          cp ./User_Setup_marauder_m5stickc.h CustomTFT_eSPI/
+          cp ./User_Setup_marauder_m5stickcp2.h CustomTFT_eSPI/
+          cp ./User_Setup_marauder_rev_feather.h CustomTFT_eSPI/
           pwd
           ls -la
           ls -la CustomTFT_eSPI
