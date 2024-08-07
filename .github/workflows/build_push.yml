@@ -20,7 +20,7 @@ jobs:
         with:
           sketch-names: TestFile.ino
           arduino-board-fqbn: esp32:esp32:esp32s2
-          platform-url: https://github.com/espressif/arduino-esp32/releases/download/2.0.10/package_esp32_dev_index.json
+          # platform-url: https://github.com/espressif/arduino-esp32/releases/download/2.0.10/package_esp32_dev_index.json
           
       - name: Show Arduino dir structure
         run: |
@@ -30,15 +30,15 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: espressif/arduino-esp32
-          ref: 2.0.4
-          path: 2.0.4arduino-esp32
+          # ref: 2.0.4
+          # path: 2.0.4arduino-esp32
           
       - name: Pull arduino-esp32 v2.0.10
         uses: actions/checkout@v2
         with:
           repository: espressif/arduino-esp32
-          ref: 2.0.10
-          path: 2.0.10
+          # ref: 2.0.10
+          # path: 2.0.10
           
       - name: Install AsyncTCP
         uses: actions/checkout@v2
