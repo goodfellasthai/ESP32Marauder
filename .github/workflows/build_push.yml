@@ -33,12 +33,12 @@ jobs:
       #    # ref: 2.0.4
       #    # path: 2.0.4arduino-esp32
           
-      - name: Pull arduino-esp32 v2.0.10
-        uses: actions/checkout@v2
-        with:
-          repository: espressif/arduino-esp32
-          ref: 3.0.3
-          path: 3.0.3
+      #- name: Pull arduino-esp32 v2.0.10
+      #  uses: actions/checkout@v2
+      #  with:
+      #    repository: espressif/arduino-esp32
+      #    ref: 3.0.3
+      #    path: 3.0.3
           
       - name: Install AsyncTCP
         uses: actions/checkout@v2
@@ -190,6 +190,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:esp32s2:PartitionScheme=min_spiffs,FlashSize=4M,PSRAM=enabled
           extra-arduino-cli-args: "--warnings none"
           
@@ -201,6 +213,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:esp32s3:PartitionScheme=min_spiffs,FlashSize=8M,PSRAM=enabled
           extra-arduino-cli-args: "--warnings none"
           
@@ -230,6 +254,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:d32:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -274,6 +310,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:d32:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -298,6 +346,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:d32:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -324,6 +384,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:d32:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -350,6 +422,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:d32:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -374,6 +458,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:d32:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -398,6 +494,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:d32:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -427,6 +535,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:m5stick-c:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -463,6 +583,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:m5stick-c:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
@@ -494,6 +626,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
+          libraries: |
+           ./CustomAsyncTCP
+           ./CustomMicroNMEA
+           ./CustomESPAsyncWebServer
+           ./CustomTFT_eSPI
+           ./Customlv_arduino
+           ./CustomJPEGDecoder
+           ./CustomNimBLE-Arduino
+           ./CustomAdafruit_NeoPixel
+           ./CustomArduinoJson
+           ./CustomLinkedList
+           ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:esp32s2:PartitionScheme=min_spiffs,FlashSize=4M,PSRAM=enabled
           extra-arduino-cli-args: "--warnings none"
           
