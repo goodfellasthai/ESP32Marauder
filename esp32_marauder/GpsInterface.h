@@ -5,7 +5,7 @@
 
 #include <MicroNMEA.h>
 #include <SoftwareSerial.h>
-#include <LinkedList.h>
+//#include <LinkedList.h>
 
 #include "configs.h"
 
