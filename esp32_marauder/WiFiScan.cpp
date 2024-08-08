@@ -1,5 +1,6 @@
 #include "WiFiScan.h"
 #include "lang_var.h"
+#include "esp_mac.h"
 
 int num_beacon = 0;
 int num_deauth = 0;
@@ -1916,7 +1917,7 @@ void WiFiScan::executeSwiftpairSpam(EBLEPayloadType type) {
     uint8_t macAddr[6];
     generateRandomMac(macAddr);
 
-    esp_base_mac_addr(macAddr);
+    esp_base_mac_addr_set(macAddr);
 
     NimBLEDevice::init("");
 
