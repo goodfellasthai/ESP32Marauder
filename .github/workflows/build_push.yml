@@ -547,22 +547,16 @@ jobs:
            ./CustomArduinoJson
            ./CustomLinkedList
            ./CustomEspSoftwareSerial
-          arduino-board-fqbn: esp32:esp32:m5stick-c:PartitionScheme=min_spiffs
+          arduino-board-fqbn: esp32:esp32:m5stack_stickc:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
       - name: Rename Marauder M5StickC bin
         run: |
-          mv ./esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.ino.bin ./esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.m5stickc_plus.bin
+          mv ./esp32_marauder/build/esp32.esp32.m5stack_stickc/esp32_marauder.ino.bin ./esp32_marauder/build/esp32.esp32.m5stack_stickc/esp32_marauder.m5stickc_plus.bin
 
       - name: Configure TFT_eSPI and configs.h for Marauder M5StickC Plus 2
         run: |
           pwd
-          # Remove files from the previous build
-          rm -f esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.ino.bootloader.bin
-          rm -f esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.ino.partitions.bin
-          rm -f esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.ino.elf
-          rm -f esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.ino.map
-          
           find /home/runner/ -name "*TFT_eSPI*"          
           sed -i 's/^#include <User_Setup_marauder_m5stickc.h>/\/\/#include <User_Setup_marauder_m5stickc.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
           sed -i 's/^\/\/#include <User_Setup_marauder_m5stickcp2.h>/#include <User_Setup_marauder_m5stickcp2.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
@@ -595,12 +589,12 @@ jobs:
            ./CustomArduinoJson
            ./CustomLinkedList
            ./CustomEspSoftwareSerial
-          arduino-board-fqbn: esp32:esp32:m5stick-c:PartitionScheme=min_spiffs
+          arduino-board-fqbn: esp32:esp32:m5stack_stickc_plus2:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
       - name: Rename Marauder M5StickC Plus 2 bin
         run: |
-          mv ./esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.ino.bin ./esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.m5stickc_plus2.bin
+          mv ./esp32_marauder/build/esp32.esp32.m5stack_stickc_plus2/esp32_marauder.ino.bin ./esp32_marauder/build/esp32.esp32.m5stack_stickc_plus2/esp32_marauder.m5stickc_plus2.bin
           
       - name: Configure TFT_eSPI and configs.h for Marauder Rev Feather
         run: |
@@ -716,14 +710,14 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: esp32_marauder.m5stickc_plus.bin
-          path: ./esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.m5stickc_plus.bin
+          path: ./esp32_marauder/build/esp32.esp32.m5stack_stickc/esp32_marauder.m5stickc_plus.bin
           retention-days: 5
 
       - name: 'Upload Marauder M5StickC Plus 2 Artifact'
         uses: actions/upload-artifact@v3
         with:
           name: esp32_marauder.m5stickc_plus2.bin
-          path: ./esp32_marauder/build/esp32.esp32.m5stick-c/esp32_marauder.m5stickc_plus2.bin
+          path: ./esp32_marauder/build/esp32.esp32.m5stack_stickc_plus2/esp32_marauder.m5stickc_plus2.bin
           retention-days: 5
           
       - name: 'Upload Rev Feather Artifact'
