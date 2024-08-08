@@ -57,7 +57,7 @@ jobs:
       - name: Install ESPAsyncWebServer
         uses: actions/checkout@v2
         with:
-          repository: me-no-dev/ESPAsyncWebServer
+          repository: bmorcelli/ESPAsyncWebServer
           ref: master
           path: CustomESPAsyncWebServer
           
@@ -110,12 +110,12 @@ jobs:
       #    ref: main
       #    path: CustomSwitchLib
           
-      #- name: Install LinkedList
-      #  uses: actions/checkout@v2
-      #  with:
-      #    repository: ivanseidel/LinkedList
-      #    ref: v1.3.3
-      #    path: CustomLinkedList
+      - name: Install LinkedList
+        uses: actions/checkout@v2
+        with:
+          repository: ivanseidel/LinkedList
+          ref: v1.3.3
+          path: CustomLinkedList
           
       - name: Install EspSoftwareSerial
         uses: actions/checkout@v2
