@@ -1916,7 +1916,7 @@ void WiFiScan::executeSwiftpairSpam(EBLEPayloadType type) {
     uint8_t macAddr[6];
     generateRandomMac(macAddr);
 
-    esp_base_mac_addr_set(macAddr);
+    esp_base_mac_addr(macAddr);
 
     NimBLEDevice::init("");
 
