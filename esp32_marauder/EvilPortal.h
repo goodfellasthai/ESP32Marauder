@@ -11,7 +11,7 @@
 #include "settings.h"
 #ifdef HAS_SCREEN
   #include "Display.h"
-//  #include <LinkedList.h>
+  #include <LinkedList.h>
 #endif
 #include "SDInterface.h"
 #include "Buffer.h"
