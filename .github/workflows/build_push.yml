@@ -190,7 +190,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -213,7 +213,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -254,7 +254,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -310,7 +310,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -346,7 +346,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -384,7 +384,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -422,7 +422,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -458,7 +458,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -494,7 +494,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -535,7 +535,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -577,7 +577,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
@@ -620,7 +620,7 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          libraries: |
+          required-libraries: |
            ./CustomAsyncTCP
            ./CustomMicroNMEA
            ./CustomESPAsyncWebServer
