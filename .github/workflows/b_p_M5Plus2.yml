@@ -162,16 +162,14 @@ jobs:
           ls
           echo "CMD:find"
           find /home/runner/ -name "*TFT_eSPI*" 
-          echo "CMD:ls  /home/runner/Arduino/libraries/CustomTFT_eSPI"
-          ls  /home/runner/Arduino/libraries/CustomTFT_eSPI
-          echo "CMD:ls /home/runner/work/ESP32Marauder/ESP32Marauder"
-          ls /home/runner/work/ESP32Marauder/ESP32Marauder    
-          echo "CMD:ls /home/runner/work/ESP32Marauder/ESP32Marauder/CustomTFT_eSPI"
-          ls /home/runner/work/ESP32Marauder/ESP32Marauder/CustomTFT_eSPI    
-          echo "CMD:cat /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h"
-          cat /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
-          sed -i 's/^#include <User_Setup_og_marauder.h>/\/\/#include <User_Setup_og_marauder.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
-          sed -i 's/^\/\/#include <User_Setup_marauder_m5stickcp2.h>/#include <User_Setup_marauder_m5stickcp2.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
+          echo "CMD:cat /home/runner/work/ESP32Marauder/ESP32Marauder/CustomTFT_eSPI/User_Setup_Select.h"
+          echo "First run should use this before /home/runner/Arduino/libraries/CustomTFT_eSPI created after first build"
+          echo "That is why the sed always looks for the last executed build but here we just need to change original"
+          cat /home/runner/work/ESP32Marauder/ESP32Marauder/CustomTFT_eSPI/User_Setup_Select.h
+          #sed -i 's/^#include <User_Setup_og_marauder.h>/\/\/#include <User_Setup_og_marauder.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
+          #sed -i 's/^\/\/#include <User_Setup_marauder_m5stickcp2.h>/#include <User_Setup_marauder_m5stickcp2.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
+          sed -i 's/^#include <User_Setup_og_marauder.h>/\/\/#include <User_Setup_og_marauder.h>/' /home/runner/work/ESP32Marauder/ESP32Marauder/CustomTFT_eSPI/User_Setup_Select.h
+          sed -i 's/^\/\/#include <User_Setup_marauder_m5stickcp2.h>/#include <User_Setup_marauder_m5stickcp2.h>/' /home/runner/work/ESP32Marauder/ESP32Marauder/CustomTFT_eSPI/User_Setup_Select.h
           sed -i 's/^  #define MARAUDER_REV_FEATHER/  \/\/#define MARAUDER_REV_FEATHER/' esp32_marauder/configs.h
           sed -i 's/^  #define MARAUDER_MINI/  \/\/#define MARAUDER_MINI/' esp32_marauder/configs.h
           sed -i 's/^  #define MARAUDER_V4/  \/\/#define MARAUDER_V4/' esp32_marauder/configs.h
