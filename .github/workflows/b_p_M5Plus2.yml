@@ -146,7 +146,16 @@ jobs:
       #    rm -rf /home/runner/.arduino15/packages/esp32/hardware/esp32/2.0.10/libraries/SD
       #    cp -R /home/runner/work/ESP32Marauder/ESP32Marauder/2.0.4arduino-esp32/libraries/SD /home/runner/.arduino15/packages/esp32/hardware/esp32/2.0.10/libraries/SD
       #    ls -la /home/runner/.arduino15/packages/esp32/hardware/esp32/2.0.10/libraries/SD
-          
+
+      - name: Upload partitions
+        run: |
+          echo "CMD:find - finds any partitions directories first"
+          find /home/runner/ -name "*TFT_eSPI*" 
+          echo "CMD:find - finds any boards.txt files"
+          find /home/runner/ -name "*boards.txt*" 
+          echo "CMD:find - find existing min_spiffs used"
+          find /home/runner/ -name "*min_spiffs*" 
+
       - name: Modify platform.txt
         run: |
           for i in $(find /home/runner/.arduino15/packages/esp32/tools/esp32-arduino-libs -name "ld_flags"); do
