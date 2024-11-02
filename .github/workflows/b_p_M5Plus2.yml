@@ -187,18 +187,18 @@ jobs:
         uses: ArminJo/arduino-test-compile@v3.2.1
         with:
           sketch-names: esp32_marauder.ino
-          required-libraries: |
-           ./CustomAsyncTCP
-           ./CustomMicroNMEA
-           ./CustomESPAsyncWebServer
-           ./CustomTFT_eSPI
-           ./Customlv_arduino
-           ./CustomJPEGDecoder
-           ./CustomNimBLE-Arduino
-           ./CustomAdafruit_NeoPixel
-           ./CustomArduinoJson
-           ./CustomLinkedList
-           ./CustomEspSoftwareSerial
+          #required-libraries: |
+          # ./CustomAsyncTCP
+          # ./CustomMicroNMEA
+          # ./CustomESPAsyncWebServer
+          # ./CustomTFT_eSPI
+          # ./Customlv_arduino
+          # ./CustomJPEGDecoder
+          # ./CustomNimBLE-Arduino
+          # ./CustomAdafruit_NeoPixel
+          # ./CustomArduinoJson
+          # ./CustomLinkedList
+          # ./CustomEspSoftwareSerial
           arduino-board-fqbn: esp32:esp32:m5stack_stickc_plus2:PartitionScheme=min_spiffs
           extra-arduino-cli-args: "--warnings none"
           
