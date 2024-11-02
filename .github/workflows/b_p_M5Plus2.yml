@@ -153,8 +153,8 @@ jobs:
           find /home/runner/ -name "*boards.txt*" 
           echo "CMD:find - find existing min_spiffs used"
           find /home/runner/ -name "*min_spiffs*"
-          echo "CMD:cat - cat the existing boards.txt @3.0.5 time of release"
-          cat /home/runner/.arduino15/packages/esp32/hardware/esp32/3.0.5/boards.txt
+          #echo "CMD:cat - cat the existing boards.txt @3.0.5 time of release"
+          #cat /home/runner/.arduino15/packages/esp32/hardware/esp32/3.0.5/boards.txt
           echo "CMD:cat - cat the existing min_spiffs.csv @3.0.5 time of release"
           cat /home/runner/.arduino15/packages/esp32/hardware/esp32/3.0.5/tools/partitions/min_spiffs.csv
 
