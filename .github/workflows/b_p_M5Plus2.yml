@@ -152,12 +152,13 @@ jobs:
           for i in $(find /home/runner/.arduino15/packages/esp32/tools/esp32-arduino-libs -name "ld_flags"); do
             sed -i 's/-mlongcalls /-mlongcalls -zmuldefs /' "$i"
           done
-          
+      
+      # goodfellasthai: had to change the sed from the plus to User_Setup_og_marauder.h as that is first in user select
       - name: Configure TFT_eSPI and configs.h for Marauder M5StickC Plus 2
         run: |
           pwd
           find /home/runner/ -name "*TFT_eSPI*"          
-          sed -i 's/^#include <User_Setup_marauder_m5stickc.h>/\/\/#include <User_Setup_marauder_m5stickc.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
+          sed -i 's/^#include <User_Setup_og_marauder.h>/\/\/#include <User_Setup_og_marauder.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
           sed -i 's/^\/\/#include <User_Setup_marauder_m5stickcp2.h>/#include <User_Setup_marauder_m5stickcp2.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
           sed -i 's/^  #define MARAUDER_REV_FEATHER/  \/\/#define MARAUDER_REV_FEATHER/' esp32_marauder/configs.h
           sed -i 's/^  #define MARAUDER_MINI/  \/\/#define MARAUDER_MINI/' esp32_marauder/configs.h
