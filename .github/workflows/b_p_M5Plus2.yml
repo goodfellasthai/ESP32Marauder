@@ -156,8 +156,20 @@ jobs:
       # goodfellasthai: had to change the sed from the plus to User_Setup_og_marauder.h as that is first in user select
       - name: Configure TFT_eSPI and configs.h for Marauder M5StickC Plus 2
         run: |
+          echo "CMD:pwd"
           pwd
-          find /home/runner/ -name "*TFT_eSPI*"          
+          echo "CMD:ls"
+          ls
+          echo "CMD:find"
+          find /home/runner/ -name "*TFT_eSPI*" 
+          echo "CMD:ls  /home/runner/Arduino/libraries/CustomTFT_eSPI"
+          ls  /home/runner/Arduino/libraries/CustomTFT_eSPI
+          echo "CMD:ls /home/runner/work/ESP32Marauder/ESP32Marauder"
+          ls /home/runner/work/ESP32Marauder/ESP32Marauder    
+          echo "CMD:ls /home/runner/work/ESP32Marauder/ESP32Marauder/CustomTFT_eSPI"
+          ls /home/runner/work/ESP32Marauder/ESP32Marauder/CustomTFT_eSPI    
+          echo "CMD:cat /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h"
+          cat /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
           sed -i 's/^#include <User_Setup_og_marauder.h>/\/\/#include <User_Setup_og_marauder.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
           sed -i 's/^\/\/#include <User_Setup_marauder_m5stickcp2.h>/#include <User_Setup_marauder_m5stickcp2.h>/' /home/runner/Arduino/libraries/CustomTFT_eSPI/User_Setup_Select.h
           sed -i 's/^  #define MARAUDER_REV_FEATHER/  \/\/#define MARAUDER_REV_FEATHER/' esp32_marauder/configs.h
